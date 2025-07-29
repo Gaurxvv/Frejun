@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# 📊 Comments Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React dashboard for managing comments with search, inline editing, and responsive design.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19.1.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-4.1.11-38B2AC)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Real-time Search** - Filter by email, name, or body
+- **Inline Editing** - Edit comments directly in the table
+- **Data Persistence** - Changes saved to localStorage
+- **Responsive Design** - Works on desktop and mobile
+- **Pagination** - Navigate through large datasets
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Quick Start
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Install dependencies
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Start development server
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Open http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React** + **TypeScript** + **Vite**
+- **Tailwind CSS** for styling
+- **Lucide React** for icons
+- **JSONPlaceholder API** for sample data
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Project Structure
+
 ```
+src/
+├── components/     # UI components (Button, Input, Table, etc.)
+├── lib/utils.ts    # Utility functions
+├── App.tsx         # Main component
+└── App.css         # Global styles
+```
+
+## 🎯 Usage
+
+1. **Search**: Use the search bar to filter comments
+2. **Edit**: Click pencil icon to edit name/body
+3. **Save**: Click checkmark to save changes
+4. **Navigate**: Use pagination controls at bottom
+
+## 📱 Mobile
+
+- Card-based layout on mobile devices
+- Touch-friendly interface
+- Responsive design with Tailwind CSS
+
+## 🚀 Deploy
+
+```bash
+npm run build
+```
+
+Deploy the `dist` folder to any static hosting service.
+
+---
+
+**Built with React, TypeScript, and Tailwind CSS**
